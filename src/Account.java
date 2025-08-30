@@ -1,60 +1,23 @@
 public class Account {
-    private String accountNumber;
-    private String accountHolder;
-    protected double balance;
+    private int accountId;
+    private String holderName;
+    private String mobileNumber;
+    private double balance;
+    private long accountNumber;
 
-    public Account(String accountNumber,String accountHolder,double balance )
-    {
-        this.accountNumber=accountNumber;
-        this.accountHolder=accountHolder;
-        this.balance=balance;
-    }
+    // getters and setters
+    public int getAccountId() { return accountId; }
+    public void setAccountId(int accountId) { this.accountId = accountId; }
 
-    public void deposit(double amount)
-    {
-        if(amount<0)
-        {
-            System.out.println("deposits must be in positive");
-            return;
-        }
-        balance+=amount;
-        System.out.println(amount+" added succesfully"+" ACC balance:"+balance);
-    }
+    public String getHolderName() { return holderName; }
+    public void setHolderName(String holderName) { this.holderName = holderName; }
 
-    public void withdraw(double amount)
-    {
-        if(amount<0)
-        {
-            System.out.println("withdrawls must be in positive");
-            return;
-        }
-        if(amount>balance)
-        {
-            System.out.println("insuffient balance can't withdraw!!");
-            return;
-        }
-        balance-=amount;
-        System.out.println(amount+"withdrawed successfully"+"Acc balance:"+balance);
-    }
+    public String getMobileNumber() { return mobileNumber; }
+    public void setMobileNumber(String mobileNumber) { this.mobileNumber = mobileNumber; }
 
-    public void checkBalance()
-    {
-        System.out.println("current Balance: "+balance);
-    }
+    public double getBalance() { return balance; }
+    public void setBalance(double balance) { this.balance = balance; }
 
-    public String getAccountNumber()
-    {
-        return accountNumber;
-    }
-
-    public String getAccountHolder()
-    {
-        return accountHolder;
-    }
-
-    public double getBalance() {
-        return balance;
-    }
-
+    public long getAccountNumber() { return accountNumber; }
+    public void setAccountNumber(long accountNumber) { this.accountNumber = accountNumber; }
 }
-
